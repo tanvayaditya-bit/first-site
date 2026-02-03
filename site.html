@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>
+            do you love me
+        </title>
+        <style>
+            body{height: 100vh;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #dc7ba2;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+
+            }
+            #lovecheck {
+                display: none;
+            }
+            .card{
+                position: relative;
+                text-align: center;
+            }
+            h1{font-size: 40px;
+                margin-bottom: 30px;
+        }
+        .buttons{
+            position: relative;
+            height: 100px;
+        }
+        label, button {
+            font-size: 20px;
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+
+        }
+        label{
+            background: #ba45dd;
+            color: white;
+            margin-right: 20px;
+        }
+        button{
+            position: absolute;
+            background: #ccc;
+            left: 120px;
+            top: 0;
+            transition: all 0.2s ease;
+        }  button:hover {
+    animation: teleport 0.2s infinite;
+  }
+
+  @keyframes teleport {
+    0%   { top: 0; left: 0; }
+    20%  { top: 0; left: 180px; }
+    40%  { top: 80px; left: 40px; }
+    60%  { top: 120px; left: 200px; }
+    80%  { top: 40px; left: 120px; }
+    100% { top: 60px; left: 60px; }
+  }
+        .result{
+            display: none;
+            text-align: center;
+        }
+        #lovecheck:checked ~ .card{
+            display:none;
+        }
+         #lovecheck:checked ~ .result{
+            display:block;
+        }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" id="lovecheck">
+        <div class="card">
+            <h1>do you love me??-_-❤️</h1>
+            <div class="buttons">
+            <label for="lovecheck">yes</label>
+        <button> no</button>
+    </div>
+        </div>
+        <div class="result">
+            <h1>yayy💖🥰</h1>
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
+        </div>
+    </body>
+</html>
